@@ -1,3 +1,10 @@
+برای وصل شدن به این ریپازیتوری از آموزش این لینک استفاده کنید : https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+برای کامیت های خود فقط و فقط از برنچ firstCheck استفاده کنید
+
+لطفا کامنت ها را در هنگام کامیت و جدا از کد وارد کنید
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
