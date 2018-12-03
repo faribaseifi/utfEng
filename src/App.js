@@ -5,6 +5,7 @@ import BlogPost from './screens/BlogPost';
 import Login from './screens/Login';
 import Profile from './screens/Profile';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
 import ScrollToTop from './components/ScrollToTop';
 import withScripts from './utils/withScripts';
@@ -21,8 +22,11 @@ class App extends Component {
             <Route path="/login" component={withScripts(Login)} />
             <Route path="/profile" component={Profile} />
           </Switch>
+          <Footer />
+
         </ScrollToTop>
       </Router>
+
     );
   }
 }

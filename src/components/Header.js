@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { userIsLoggedIn, removeToken as logout } from '../utils/authManager';
 
-export class componentName extends Component {
+export class Header extends Component {
   render() {
     return (
       <header id="header-container">
@@ -328,4 +328,4 @@ export class componentName extends Component {
   }
 }
 
-export default componentName;
+export default Header;
