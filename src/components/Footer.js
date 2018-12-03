@@ -5,30 +5,44 @@ export class Footer extends Component {
   render() {
     return (
             <div id="footer" className="dark">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-md-5 col-sm-6">
-              <img className="footer-logo" src="images/logo2.png" alt="" />
-              <br />
-              <br />
-              <p>
-                Morbi convallis bibendum urna ut viverra. Maecenas quis
-                consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi
-                ultricies laoreet ullamcorper phasellus semper.
-              </p>
-            </div>
 
-            <div className="col-md-4 col-sm-6 ">
-              <h4>Helpful Links</h4>
+              <h4>University Foundation Chart</h4>
+              <ul className="footer-links small">
+                <li>
+                  <a href="#">Organizational Chart</a>
+                </li>
+                <li>
+                  <a href="#">Board Of Trustees</a>
+                </li>
+                <li>
+                  <a href="#">Board Of Directors</a>
+                </li>
+                <li>
+                  <a href="#">CEO</a>
+                </li>
+              </ul>
+
+              <span>
+
+        // this is a place holder for EnAmAd :|
+
+              </span>
+                </div>
+
+            <div className="col-md-4 col-sm-6 small">
+              <h4>Partnerships</h4>
               <ul className="footer-links">
                 <li>
-                  <a href="#">Login</a>
+                  <a href="#">Student Funds</a>
                 </li>
                 <li>
-                  <a href="#">Sign Up</a>
+                  <a href="#">Projects In Action</a>
                 </li>
                 <li>
-                  <a href="#">My Account</a>
+                  <a href="#">Join Partnership Program</a>
                 </li>
                 <li>
                   <a href="#">Add Property</a>
@@ -61,21 +75,17 @@ export class Footer extends Component {
               <div className="clearfix" />
             </div>
 
-            <div className="col-md-3  col-sm-12">
+            <div className="col-md-3  col-sm-12 small">
               <h4>Contact Us</h4>
               <div className="text-widget">
-                <span>12345 Little Lonsdale St, Melbourne</span> <br />
-                Phone: <span>(123) 123-456 </span>
+                <span>50th Block, across Blood Donation Organization, Vesal Shirazi ST.</span> <br />
+                Phone: <span>021-88390459 </span>
                 <br />
-                E-Mail:
+                E-Mail: info@utf.ut.ac.ir
                 <span>
                   {' '}
                   <a href="#">
-                    <span
-                      className="__cf_email__"
-                      data-cfemail="741b12121d171134110c15190418115a171b19">
-                      [email&#160;protected]
-                    </span>
+
                   </a>{' '}
                 </span>
                 <br />
@@ -83,25 +93,11 @@ export class Footer extends Component {
 
               <ul className="social-icons margin-top-20">
                 <li>
-                  <a className="facebook" href="#">
-                    <i className="icon-facebook" />
+                  <a className="instagram" href="#">
+                    <i className="icon-instagram" />
                   </a>
                 </li>
-                <li>
-                  <a className="twitter" href="#">
-                    <i className="icon-twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a className="gplus" href="#">
-                    <i className="icon-gplus" />
-                  </a>
-                </li>
-                <li>
-                  <a className="vimeo" href="#">
-                    <i className="icon-vimeo" />
-                  </a>
-                </li>
+
               </ul>
             </div>
           </div>
@@ -109,7 +105,7 @@ export class Footer extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="copyrights">
-                © 2016 Findeo. All Rights Reserved.
+                © 2018 all rights reserved for University of Tehran
               </div>
             </div>
           </div>

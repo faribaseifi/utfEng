@@ -22,20 +22,7 @@ export class Header extends Component {
                     />
                   </a>
                 </li>
-                <li>
-                  <div className="top-bar-dropdown">
-                    <span>Address</span>
-                    <ul className="options">
-                      <li>
-                        <div className="arrow" />
-                      </li>
-                      <li>
-                        <a>50th Block, across Blood Donation Organization, Vesal Shirazi ST.</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                </li>
+              
               </ul>
             </div>
 
