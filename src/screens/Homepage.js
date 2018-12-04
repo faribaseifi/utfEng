@@ -37,20 +37,16 @@ class Homepage extends Component {
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
                       <div className="home-slider-price">
-                        $1700 <i>/ monthly</i>
+                        Student Funds/Loans <i></i>
                       </div>
 
                       <div className="home-slider-title">
                         <h3>
                           <a href="single-property-page-1.html">
-                            Meridian Villas
+                           only for top students
                           </a>
                         </h3>
-                        <span>
-                          <i className="fa fa-map-marker" /> 778 Country St.
-                          Panama City, FL
-                        </span>
-                      </div>
+                                          </div>
 
                       <a
                         href="single-property-page-1.html"
@@ -65,25 +61,21 @@ class Homepage extends Component {
           </div>
 
           <div
-            data-background-image="images/home-slider-02.jpg"
+            data-background-image="http://utf.ut.ac.ir/assets/images/tehran_university.jpg"
             className="item">
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
-                      <div className="home-slider-price">$325,000</div>
+                      <div className="home-slider-price">Supporting Founders</div>
 
                       <div className="home-slider-title">
                         <h3>
                           <a href="single-property-page-1.html">
-                            Eagle Apartments
+                             Tehran University
                           </a>
                         </h3>
-                        <span>
-                          <i className="fa fa-map-marker" /> 9364 School St.
-                          Lynchburg, NY
-                        </span>
                       </div>
 
                       <a
@@ -107,25 +99,21 @@ class Homepage extends Component {
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
                       <div className="home-slider-price">
-                        $500 <i>/ monthly</i>
+
                       </div>
 
                       <div className="home-slider-title">
                         <h3>
                           <a href="single-property-page-1.html">
-                            Old Town Manchester
+
                           </a>
                         </h3>
-                        <span>
-                          <i className="fa fa-map-marker" /> 7843 Durham Avenue,
-                          MD{' '}
-                        </span>
+
                       </div>
 
                       <a
                         href="single-property-page-1.html"
                         className="read-more">
-                        View Details <i className="fa fa-angle-right" />
                       </a>
                     </div>
                   </div>
@@ -133,6 +121,39 @@ class Homepage extends Component {
               </div>
             </div>
           </div>
+
+          <div
+            data-background-image="http://utf.ut.ac.ir/assets/images/slider5.png"
+            className="item">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="home-slider-container">
+                    <div className="home-slider-desc">
+                      <div className="home-slider-price">
+
+                      </div>
+
+                      <div className="home-slider-title">
+                        <h3>
+                          <a href="single-property-page-1.html">
+
+                          </a>
+                        </h3>
+
+                      </div>
+
+                      <a
+                        href="single-property-page-1.html"
+                        className="read-more">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <section
@@ -248,10 +269,9 @@ class Homepage extends Component {
                     <i className="im im-icon-Mail-Money" />
                   </div>
 
-                  <h3>Cash Assistance (FDN)</h3>
+                  <h3>Cash Donations (Fundino)</h3>
                   <p>
-                    See who specializes in your area, has the most reviews and
-                    the right experience to meet your needs.
+                  learn more...
                   </p>
                 </div>
               </div>
@@ -262,10 +282,9 @@ class Homepage extends Component {
                     <i className="im im-icon-Money-2" />
                   </div>
 
-                  <h3>Cash Assistance to the Foundation</h3>
+                  <h3>Help With Financial Tasks</h3>
                   <p>
-                    More than 10,000 customers buy or sell a home with us each
-                    year. We help people and homes find each together.
+                    learn more...
                   </p>
                 </div>
               </div>
@@ -276,10 +295,9 @@ class Homepage extends Component {
                     <i className="im im-icon-University-2" />
                   </div>
 
-                  <h3>University of Tehran website</h3>
+                  <h3>University of Tehran</h3>
                   <p>
-                    Our specialists can help you get started on that home
-                    project. Find paint colors, that perfect tile and more.{' '}
+                    Main WebSite
                   </p>
                 </div>
               </div>
@@ -289,6 +307,8 @@ class Homepage extends Component {
 
         <section className="fullwidth margin-top-105 margin-bottom-0 padding-bottom-70 padding-top-100">
           <h3 className="headline-box">Benefactors</h3>
+
+// agent start
 
           <div className="container">
             <div className="row">
@@ -362,6 +382,9 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
+
+                  // agent end
+
 
                   <div
                     className="carousel-item"
@@ -755,7 +778,6 @@ class Homepage extends Component {
           </div>
         </section>
 
-    
         <div id="backtotop">
           <a href="#" />
         </div>
@@ -765,3 +787,6 @@ class Homepage extends Component {
 }
 
 export default Homepage;
+
+
+// this must have been updated...

@@ -23,10 +23,8 @@ class App extends Component {
             <Route path="/profile" component={Profile} />
           </Switch>
           <Footer />
-
         </ScrollToTop>
       </Router>
-
     );
   }
 }
