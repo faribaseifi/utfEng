@@ -61,7 +61,7 @@ class Homepage extends Component {
           </div>
 
           <div
-            data-background-image="http://utf.ut.ac.ir/assets/images/tehran_university.jpg"
+            data-background-image="images/home-slider-02.jpg"
             className="item">
             <div className="container">
               <div className="row">
@@ -123,7 +123,7 @@ class Homepage extends Component {
           </div>
 
           <div
-            data-background-image="http://utf.ut.ac.ir/assets/images/slider5.png"
+            data-background-image="images/home-slider-04.jpg"
             className="item">
             <div className="container">
               <div className="row">
@@ -153,6 +153,39 @@ class Homepage extends Component {
               </div>
             </div>
           </div>
+
+          <div
+            data-background-image="images/home-slider-05.jpg"
+            className="item">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="home-slider-container">
+                    <div className="home-slider-desc">
+                      <div className="home-slider-price">
+
+                      </div>
+
+                      <div className="home-slider-title">
+                        <h3>
+                          <a href="single-property-page-1.html">
+
+                          </a>
+                        </h3>
+
+                      </div>
+
+                      <a
+                        href="single-property-page-1.html"
+                        className="read-more">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
         </div>
 
