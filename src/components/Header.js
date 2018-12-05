@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { userIsLoggedIn, removeToken as logout } from '../utils/authManager';
-
+import NavItem from '../NavItem';
 export class Header extends Component {
   render() {
     return (
@@ -22,7 +22,7 @@ export class Header extends Component {
                     />
                   </a>
                 </li>
-              
+
               </ul>
             </div>
 
@@ -69,9 +69,8 @@ export class Header extends Component {
                   <li>
                     <a href="#">About</a>
                     <ul>
-                      <li>
-                        <a href="elements.html">University of Tehran</a>
-                      </li>
+
+                      <NavItem to="/AboutUni">about university</NavItem>
                       <li>
                         <a href="elements.html">Donators</a>
                       </li>

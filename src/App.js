@@ -4,6 +4,7 @@ import Homepage from './screens/Homepage';
 import BlogPost from './screens/BlogPost';
 import Login from './screens/Login';
 import Profile from './screens/Profile';
+import AboutUni from './screens/AboutUni';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
@@ -20,7 +21,9 @@ class App extends Component {
             <Route path="/" exact component={withScripts(Homepage)} />
             <Route path="/blog/:id" component={withScripts(BlogPost)} />
             <Route path="/login" component={withScripts(Login)} />
+            <Route path="/AboutUni" component={AboutUni} />
             <Route path="/profile" component={Profile} />
+
           </Switch>
           <Footer />
         </ScrollToTop>
