@@ -49,7 +49,7 @@ class App extends Component {
             <Route path="/OrganizationalChart" component={OrganizationalChart} />
             <Route path="/BoardofTrustees" component={BoardofTrustees} />
             <Route path="/Inspector" component={Inspector} />
-            <Route path="/ContactUs" component={ContactUs} />          
+            <Route path="/ContactUs" component={ContactUs} />
             <Route path="/FAQ" component={FAQ} />
             <Route path="/JoinDonators" component={JoinDonators} />
             <Route path="/DonateEdu" component={DonateEdu} />
