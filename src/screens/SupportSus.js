@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 
 
-class AboutUni extends Component {
+class SupportSus extends Component {
 render(){
   return (
     <div>
-      <h3>hello AboutUni</h3>
+      <h3>hello  SupportSus</h3>
     </div>
   )
 }
 }
 
-export default AboutUni;
+export default SupportSus;

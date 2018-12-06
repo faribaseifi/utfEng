@@ -41,7 +41,7 @@ export class Header extends Component {
         <div className="clearfix" />
 
         <div id="header">
-          <div className="container">
+          <div className="container-fluid">
             <div className="left-side">
               <div id="logo">
                 <a href="index-2.html">
@@ -60,7 +60,7 @@ export class Header extends Component {
                 <nav id="navigation" className="style-1">
                 <ul id="responsive">
                   <li>
-                    <a className="current" href="#">
+                    <a  href="/">
                       Home
                     </a>
 
@@ -71,63 +71,50 @@ export class Header extends Component {
                     <ul>
 
                       <NavItem to="/AboutUni">about university</NavItem>
-                      <li>
-                        <a href="elements.html">Donators</a>
-                      </li>
-                      <li>
-                        <a href="elements.html">Goals and Guidelines</a>
-                      </li>
+
+                       <NavItem to="/Donator">Donators</NavItem>
+
+                       <NavItem to="/GoalsandGuidelines">Goals and Guidelines</NavItem>
+
                       <li>
                         <a href="elements.html">Reports</a>
 
 
                             <ul>
-                              <li>
-                                <a href="single-property-page-1.html">
-                                Operation Report
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-property-page-1.html">
-                                Donations Report
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-property-page-1.html">
-                                Inspectors Report
-                                </a>
-                              </li>
-                              <li>
-                                <a href="single-property-page-1.html">
-                                Financial Report
-                                </a>
-                              </li>
+
+                            <NavItem to="/OperationReport">Operation Report</NavItem>
+
+
+                            <NavItem to="/DonationsReport">Donations Report</NavItem>
+
+
+                            <NavItem to="/InspectorsReport">Inspectors Report</NavItem>
+
+
+                            <NavItem to="/FinancialReport">Financial Report</NavItem>
+
+
                             </ul>
 
                       </li>
                       <li>
                         <a href="#">Elements</a>
                         <ul>
-                          <li>
-                            <a href="single-property-page-1.html">
-                              organizational chart
-                            </a>
-                          </li>
-                          <li>
-                            <a href="single-property-page-2.html">
-                              Board of Trustees
-                            </a>
-                          </li>
+
+                        <NavItem to="/OrganizationalChart">Organizational Chart</NavItem>
+
+
+                        <NavItem to="/BoardofTrustees">Board of Trustees</NavItem>
+
+
                           <li>
                             <a href="single-property-page-3.html">
                               Board of Directors
                             </a>
                             <ul>
-                              <li>
-                                <a href="single-property-page-1.html">
-                                Inspector
-                                </a>
-                              </li>
+
+                            <NavItem to="/Inspector">Inspector</NavItem>
+
                             </ul>
 
                             <li>
@@ -137,9 +124,8 @@ export class Header extends Component {
                           </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="elements.html">FAQ</a>
-                      </li>
+
+                      <NavItem to="/FAQ">FAQ</NavItem>
 
                     </ul>
                   </li>
@@ -147,12 +133,11 @@ export class Header extends Component {
                   <li>
                     <a href="#">Donate Now!</a>
                     <ul>
-                      <li>
-                        <a href="compare-properties.html">Become a Donator</a>
-                      </li>
-                      <li>
-                        <a href="submit-property.html">Donate via Time/Skill</a>
-                      </li>
+
+                    <NavItem to="/BecomeaDonator">Become a Donator</NavItem>
+
+                    <NavItem to="/DonateviaTime">Donate via Time/Skill</NavItem>
+
                     </ul>
                   </li>
 
@@ -162,25 +147,29 @@ export class Header extends Component {
                       <li>
                         <a href="blog.html">Help with Student Loans</a>
                         <ul>
-                          <li>
-                            <a href="blog.html">Support Susceptible Students</a>
-                          </li>
-                          <li>
-                            <a href="blog-post.html">Support International Susceptible Students</a>
-                          </li>
+
+                        <NavItem to="/SupportSus">Support Susceptible Students</NavItem>
+
+                        <NavItem to="/SupportInt">Support International Susceptible Students</NavItem>
+
+
                         </ul>
                       </li>
-                      <li>
-                        <a href="contact.html">Help with Projects in Action</a>
-                      </li>
-                      <li>
-                        <a href="elements.html">Join Donators Community</a>
-                      </li>
-                      <li>
-                        <a href="pricing-tables.html">Donate Educational Products</a>
-                      </li>
+
+                      <NavItem to="/HelpActionProjs">Help with Projects in Action</NavItem>
+
+                      <NavItem to="/JoinDonators">Join Donators Community</NavItem>
+
+                      <NavItem to="/DonateEdu">Donate Educational Products</NavItem>
+
+
                     </ul>
                   </li>
+
+                <NavItem to="/Branches">Branches</NavItem>
+
+                <NavItem to="/ContactUs">Contact Us</NavItem>
+
                 </ul>
               </nav>
               <div className="clearfix" />
