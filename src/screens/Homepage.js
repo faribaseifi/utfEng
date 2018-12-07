@@ -7,6 +7,10 @@ class Homepage extends Component {
   };
 
   componentDidMount() {
+    this.fetchNews();
+  }
+
+  fetchNews = () => {
     fetch('https://www.kanoonbook.ir/index.php/app/utfNews', {
       mode: 'cors'
     })
@@ -20,7 +24,7 @@ class Homepage extends Component {
       .catch(err => {
         console.error(err);
       });
-  }
+  };
 
   render() {
     return (
@@ -37,16 +41,16 @@ class Homepage extends Component {
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
                       <div className="home-slider-price">
-                        Student Funds/Loans <i></i>
+                        Student Funds/Loans <i />
                       </div>
 
                       <div className="home-slider-title">
                         <h3>
                           <a href="single-property-page-1.html">
-                           only for top students
+                            only for top students
                           </a>
                         </h3>
-                                          </div>
+                      </div>
 
                       <a
                         href="single-property-page-1.html"
@@ -68,12 +72,14 @@ class Homepage extends Component {
                 <div className="col-md-12">
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
-                      <div className="home-slider-price">Supporting Founders</div>
+                      <div className="home-slider-price">
+                        Supporting Founders
+                      </div>
 
                       <div className="home-slider-title">
                         <h3>
                           <a href="single-property-page-1.html">
-                             Tehran University
+                            Tehran University
                           </a>
                         </h3>
                       </div>
@@ -98,21 +104,16 @@ class Homepage extends Component {
                 <div className="col-md-12">
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
-
-
                       <div className="home-slider-title">
                         <h3>
-                          <a href="single-property-page-1.html">
-
-                          </a>
+                          <a href="single-property-page-1.html" />
                         </h3>
-
                       </div>
 
                       <a
                         href="single-property-page-1.html"
-                        className="read-more">
-                      </a>
+                        className="read-more"
+                      />
                     </div>
                   </div>
                 </div>
@@ -128,21 +129,16 @@ class Homepage extends Component {
                 <div className="col-md-12">
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
-
-
                       <div className="home-slider-title">
                         <h3>
-                          <a href="single-property-page-1.html">
-
-                          </a>
+                          <a href="single-property-page-1.html" />
                         </h3>
-
                       </div>
 
                       <a
                         href="single-property-page-1.html"
-                        className="read-more">
-                      </a>
+                        className="read-more"
+                      />
                     </div>
                   </div>
                 </div>
@@ -158,28 +154,22 @@ class Homepage extends Component {
                 <div className="col-md-12">
                   <div className="home-slider-container">
                     <div className="home-slider-desc">
-
-
                       <div className="home-slider-title">
                         <h3>
-                          <a href="single-property-page-1.html">
-
-                          </a>
+                          <a href="single-property-page-1.html" />
                         </h3>
-
                       </div>
 
                       <a
                         href="single-property-page-1.html"
-                        className="read-more">
-                      </a>
+                        className="read-more"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
 
         <section
@@ -296,9 +286,7 @@ class Homepage extends Component {
                   </div>
 
                   <h3>Cash Donations (Fundino)</h3>
-                  <p>
-                  learn more...
-                  </p>
+                  <p>learn more...</p>
                 </div>
               </div>
 
@@ -309,9 +297,7 @@ class Homepage extends Component {
                   </div>
 
                   <h3>Help With Financial Tasks</h3>
-                  <p>
-                    learn more...
-                  </p>
+                  <p>learn more...</p>
                 </div>
               </div>
 
@@ -322,9 +308,7 @@ class Homepage extends Component {
                   </div>
 
                   <h3>University of Tehran</h3>
-                  <p>
-                    Main WebSite
-                  </p>
+                  <p>Main WebSite</p>
                 </div>
               </div>
             </div>
@@ -333,7 +317,6 @@ class Homepage extends Component {
 
         <section className="fullwidth margin-top-105 margin-bottom-0 padding-bottom-70 padding-top-100">
           <h3 className="headline-box">Benefactors</h3>
-
 
           <div className="container">
             <div className="row">
@@ -407,9 +390,6 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-
-            
-
 
                   <div
                     className="carousel-item"
