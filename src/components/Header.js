@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import AuthContext from '../utils/authContext';
 import NavItem from '../NavItem';
 export class Header extends Component {
@@ -61,7 +61,13 @@ export class Header extends Component {
               <nav id="navigation" className="style-1">
                 <ul id="responsive">
                   <li>
-                    <a href="/">Home</a>
+                    <a
+                      className={
+                        this.props.location.pathname === '/' ? 'current' : ''
+                      }
+                      href="/">
+                      Home
+                    </a>
                   </li>
 
                   <li>
@@ -200,4 +206,4 @@ export class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
