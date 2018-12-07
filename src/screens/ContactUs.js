@@ -1,39 +1,37 @@
-import React, { Component } from 'react';
-import InfiniteScroller from 'react-infinite-scroller';
+import React, { Component , Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import NavItem from '../components/NavItem'
+
+
 
 class ContactUs extends Component {
-  state = {
-    items: [],
-    hasMore: true
-  };
+render(){
+  return (
+    <div class="parallax titlebar" data-background="images/listings-parallax.jpg" data-color="#333333" data-color-opacity="0.7" data-img-width="800" data-img-height="505" style={{backgroundImage: "url(&quot;images/listings-parallax.jpg&quot;)", backgroundAttachment: "fixed", backgroundSize: "1199.21px 757px", backgroundPosition: "50% -101.294px" }}  >
+    <div class="parallax-overlay" style={{backgroundColor: "rgb(51, 51, 51)", opacity: 0.7}}></div>
 
-  loadMore = pageNum => {
-    const postId = 1;
-    if (pageNum === 20) this.setState({ hasMore: false });
-    fetch(
-      `https://www.kanoonbook.ir/index.php/app/utfGetNews/${postId}?pageNum=${pageNum}&pageCount=5`
-    )
-      .then(res => res.json())
-      .then(data =>
-        this.setState(state => ({ items: state.items.concat(data) }))
-      )
-      .catch(err => console.error(err));
-  };
+      <div id="titlebar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
 
-  render() {
-    return (
-      <InfiniteScroller
-        pageStart={0}
-        loadMore={this.loadMore}
-        hasMore={this.state.hasMore}
-        loader={<div>LOADING>>>></div>}>
-        {this.state.items.map(item => (
-          <div>{JSON.stringify(item)}</div>
-        ))}
-      </InfiniteScroller>
-    );
-  }
+              <h2>Listings</h2>
+              <span>Grid Layout With Sidebar</span>
+
+              <nav id="breadcrumbs">
+                <ul>
+                  <NavItem to="/">Homepage</NavItem>
+                  <NavItem to="/ContactUs">Contact Us</NavItem>
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 }
 
 export default ContactUs;

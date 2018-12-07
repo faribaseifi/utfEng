@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const NavItem = props => (
-  <li>
-    <NavLink activeClassName={'current'} {...props} />
+  <li >
+    <NavLink style = {{fontSize: "12px"}} activeClassName={'current'} {...props} />
   </li>
 );
 
