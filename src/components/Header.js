@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { userIsLoggedIn, removeToken as logout } from '../utils/authManager';
-import NavItem from '../NavItem';
+import { Link, withRouter } from 'react-router-dom';
+import AuthContext from '../utils/authContext';
+import NavItem from './NavItem';
+
 export class Header extends Component {
+  static contextType = AuthContext;
   render() {
     return (
       <header id="header-container">
@@ -11,7 +13,7 @@ export class Header extends Component {
             <div className="left-side">
               <ul className="top-bar-menu">
                 <li>
-                  <i className="fa fa-phone" />   021-88390459{' '}
+                  <i className="fa fa-phone" /> 021-88390459{' '}
                 </li>
                 <li>
                   <i className="fa fa-envelope" /> info@utf.ut.ac.ir{' '}
@@ -22,18 +24,18 @@ export class Header extends Component {
                     />
                   </a>
                 </li>
-
               </ul>
             </div>
 
             <div className="right-side">
               <ul className="social-icons">
-
-              <li>
-                <a className="instagram" href="https://www.instagram.com/hamiyanut/">
-                  <i className="icon-instagram" />
-                </a>
-              </li>
+                <li>
+                  <a
+                    className="instagram"
+                    href="https://www.instagram.com/hamiyanut/">
+                    <i className="icon-instagram" />
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -57,87 +59,82 @@ export class Header extends Component {
                 </button>
               </div>
 
-                <nav id="navigation" className="style-1">
+              <nav id="navigation" className="style-1">
                 <ul id="responsive">
-                  <li>
-                    <a  href="/">
-                      Home
-                    </a>
-
-                  </li>
+                  <NavItem exact={true} ativeClassName={'current'} to="/">
+                    Home
+                  </NavItem>
 
                   <li>
                     <a href="#">About</a>
                     <ul>
-
                       <NavItem to="/AboutUni">about university</NavItem>
 
-                       <NavItem to="/Donator">Donators</NavItem>
+                      <NavItem to="/Donator">Donators</NavItem>
 
-                       <NavItem to="/GoalsandGuidelines">Goals and Guidelines</NavItem>
+                      <NavItem to="/GoalsandGuidelines">
+                        Goals and Guidelines
+                      </NavItem>
 
                       <li>
                         <a href="elements.html">Reports</a>
 
+                        <ul>
+                          <NavItem to="/OperationReport">
+                            Operation Report
+                          </NavItem>
 
-                            <ul>
+                          <NavItem to="/DonationsReport">
+                            Donations Report
+                          </NavItem>
 
-                            <NavItem to="/OperationReport">Operation Report</NavItem>
+                          <NavItem to="/InspectorsReport">
+                            Inspectors Report
+                          </NavItem>
 
-
-                            <NavItem to="/DonationsReport">Donations Report</NavItem>
-
-
-                            <NavItem to="/InspectorsReport">Inspectors Report</NavItem>
-
-
-                            <NavItem to="/FinancialReport">Financial Report</NavItem>
-
-
-                            </ul>
-
+                          <NavItem to="/FinancialReport">
+                            Financial Report
+                          </NavItem>
+                        </ul>
                       </li>
                       <li>
                         <a href="#">Elements</a>
                         <ul>
+                          <NavItem to="/OrganizationalChart">
+                            Organizational Chart
+                          </NavItem>
 
-                        <NavItem to="/OrganizationalChart">Organizational Chart</NavItem>
-
-
-                        <NavItem to="/BoardofTrustees">Board of Trustees</NavItem>
-
+                          <NavItem to="/BoardofTrustees">
+                            Board of Trustees
+                          </NavItem>
 
                           <li>
                             <a href="single-property-page-3.html">
                               Board of Directors
                             </a>
                             <ul>
-
-                            <NavItem to="/Inspector">Inspector</NavItem>
-
+                              <NavItem to="/Inspector">Inspector</NavItem>
                             </ul>
 
                             <li>
                               <a href="elements.html">CEO</a>
                             </li>
-
                           </li>
                         </ul>
                       </li>
 
                       <NavItem to="/FAQ">FAQ</NavItem>
-
                     </ul>
                   </li>
 
                   <li>
                     <a href="#">Donate Now!</a>
                     <ul>
+                      <NavItem to="/BecomeaDonator">Become a Donator</NavItem>
 
-                    <NavItem to="/BecomeaDonator">Become a Donator</NavItem>
-
-                    <NavItem to="/DonateviaTime">Donate via Time/Skill</NavItem>
-
+                      <NavItem to="/DonateviaTime">
+                        Donate via Time/Skill
+                      </NavItem>
                     </ul>
                   </li>
 
@@ -147,29 +144,33 @@ export class Header extends Component {
                       <li>
                         <a href="blog.html">Help with Student Loans</a>
                         <ul>
+                          <NavItem to="/SupportSus">
+                            Support Susceptible Students
+                          </NavItem>
 
-                        <NavItem to="/SupportSus">Support Susceptible Students</NavItem>
-
-                        <NavItem to="/SupportInt">Support International Susceptible Students</NavItem>
-
-
+                          <NavItem to="/SupportInt">
+                            Support International Susceptible Students
+                          </NavItem>
                         </ul>
                       </li>
 
-                      <NavItem to="/HelpActionProjs">Help with Projects in Action</NavItem>
+                      <NavItem to="/HelpActionProjs">
+                        Help with Projects in Action
+                      </NavItem>
 
-                      <NavItem to="/JoinDonators">Join Donators Community</NavItem>
+                      <NavItem to="/JoinDonators">
+                        Join Donators Community
+                      </NavItem>
 
-                      <NavItem to="/DonateEdu">Donate Educational Products</NavItem>
-
-
+                      <NavItem to="/DonateEdu">
+                        Donate Educational Products
+                      </NavItem>
                     </ul>
                   </li>
 
-                <NavItem to="/Branches">Branches</NavItem>
+                  <NavItem to="/Branches">Branches</NavItem>
 
-                <NavItem to="/ContactUs">Contact Us</NavItem>
-
+                  <NavItem to="/ContactUs">Contact Us</NavItem>
                 </ul>
               </nav>
               <div className="clearfix" />
@@ -177,8 +178,10 @@ export class Header extends Component {
 
             <div className="right-side">
               <div className="header-widget">
-                {userIsLoggedIn() ? (
-                  <button onClick={logout} className="sign-in">
+                {this.context.userIsLoggedIn ? (
+                  <button
+                    onClick={this.context.removeToken}
+                    className="sign-in">
                     Log Out
                   </button>
                 ) : (
@@ -198,4 +201,4 @@ export class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

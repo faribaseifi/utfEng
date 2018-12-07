@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { setToken } from '../utils/authManager';
+import AuthContext from '../utils/authContext';
 
 export class Login extends Component {
+  static contextType = AuthContext;
   state = {
     username: '',
     password: '',
@@ -31,7 +32,7 @@ export class Login extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        setToken(data.token);
+        this.context.setToken(data.token);
         this.setState({ redirectToReferer: true });
       })
       .catch(err => console.error(err))
