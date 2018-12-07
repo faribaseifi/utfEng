@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import AuthContext from '../utils/authContext';
-import NavItem from '../NavItem';
+import NavItem from './NavItem';
+
 export class Header extends Component {
   static contextType = AuthContext;
   render() {
@@ -60,15 +61,9 @@ export class Header extends Component {
 
               <nav id="navigation" className="style-1">
                 <ul id="responsive">
-                  <li>
-                    <a
-                      className={
-                        this.props.location.pathname === '/' ? 'current' : ''
-                      }
-                      href="/">
-                      Home
-                    </a>
-                  </li>
+                  <NavItem exact={true} ativeClassName={'current'} to="/">
+                    Home
+                  </NavItem>
 
                   <li>
                     <a href="#">About</a>
