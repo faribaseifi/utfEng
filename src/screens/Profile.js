@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { getToken } from '../utils/authManager';
+import AuthContext from '../utils/authContext';
 import Axios from 'axios';
 
 export class Profile extends Component {
+  static contextType = AuthContext;
   state = {
     data: null
   };
   componentDidMount() {
-    const token = getToken();
-    console.log(token);
+    const token = this.context.getToken();
     Axios.get('https://www.kanoonbook.ir/index.php/app/test', {
       headers: { Authorization: `Bearer ${token}` }
     })
