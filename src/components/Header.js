@@ -47,7 +47,7 @@ export class Header extends Component {
             <div className="left-side">
               <div id="logo">
                 <a href="index-2.html">
-                  <img src="images/Capture.PNG" alt="" />
+                  <img src="images/Capture.PNG" alt="" href="/" />
                 </a>
               </div>
 
@@ -61,12 +61,12 @@ export class Header extends Component {
 
               <nav id="navigation" className="style-1">
                 <ul id="responsive">
-                  <NavItem exact={true} ativeClassName={'current'} to="/">
+                  <NavItem exact={true} to="/">
                     Home
                   </NavItem>
 
                   <li>
-                    <a href="#">About</a>
+                    <a style = {{fontSize: "13px"}} href="#">About</a>
                     <ul>
                       <NavItem to="/AboutUni">about university</NavItem>
 
@@ -77,7 +77,7 @@ export class Header extends Component {
                       </NavItem>
 
                       <li>
-                        <a href="elements.html">Reports</a>
+                        <a style = {{fontSize: "13px"}} href="#">Reports</a>
 
                         <ul>
                           <NavItem to="/OperationReport">
@@ -92,13 +92,13 @@ export class Header extends Component {
                             Inspectors Report
                           </NavItem>
 
-                          <NavItem to="/FinancialReport">
+                          <NavItem  to="/FinancialReport">
                             Financial Report
                           </NavItem>
                         </ul>
                       </li>
                       <li>
-                        <a href="#">Elements</a>
+                        <a style = {{fontSize: "13px"}} href="#">Elements</a>
                         <ul>
                           <NavItem to="/OrganizationalChart">
                             Organizational Chart
@@ -109,16 +109,15 @@ export class Header extends Component {
                           </NavItem>
 
                           <li>
-                            <a href="single-property-page-3.html">
+                            <a style = {{fontSize: "13px"}} href="single-property-page-3.html">
                               Board of Directors
                             </a>
                             <ul>
                               <NavItem to="/Inspector">Inspector</NavItem>
                             </ul>
 
-                            <li>
-                              <a href="elements.html">CEO</a>
-                            </li>
+                            <NavItem to="/CEO">CEO</NavItem>
+
                           </li>
                         </ul>
                       </li>
@@ -128,7 +127,7 @@ export class Header extends Component {
                   </li>
 
                   <li>
-                    <a href="#">Donate Now!</a>
+                    <a style = {{fontSize: "13px"}} href="#">Donate Now!</a>
                     <ul>
                       <NavItem to="/BecomeaDonator">Become a Donator</NavItem>
 
@@ -139,10 +138,10 @@ export class Header extends Component {
                   </li>
 
                   <li>
-                    <a href="#">How To</a>
+                    <a style = {{fontSize: "13px"}} href="#">How To</a>
                     <ul>
                       <li>
-                        <a href="blog.html">Help with Student Loans</a>
+                        <a style = {{fontSize: "13px"}} href="#">Help with Student Loans</a>
                         <ul>
                           <NavItem to="/SupportSus">
                             Support Susceptible Students
@@ -201,4 +200,4 @@ export class Header extends Component {
   }
 }
 
-export default withRouter(Header);
+export default Header;

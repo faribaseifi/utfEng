@@ -14,4 +14,6 @@ render(){
 }
 }
 
+// we have no idea wtf this is and where the fuck it came from
+
 export default Donators;

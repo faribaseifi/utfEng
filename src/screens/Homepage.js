@@ -1,13 +1,56 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Benefactor from '../components/Benefactor.js';
+import Supporter from '../components/Supporter.js';
+import { loadScripts, scripts } from '../utils/withScripts';
 
 class Homepage extends Component {
   state = {
-    news: []
+    news: [],
+    benefactors:[],
+    supporters:[]
   };
 
   componentDidMount() {
     this.fetchNews();
+    this.fetchBenefactors();
+    this.fetchSupporters();
+  }
+
+  fetchBenefactors= () =>{
+    fetch('https://utf.ut.ac.ir/index.php/wsrv/getAllBenefactors', {
+      mode: 'cors'
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+
+        this.setState({ benefactors: data }, () => {
+          loadScripts(scripts)
+        });
+
+      })
+      .catch(err => {
+        console.error(err);
+      });
+
+  }
+
+  fetchSupporters= () =>{
+    fetch('https://utf.ut.ac.ir/index.php/wsrv/getAllSupporters', {
+      mode: 'cors'
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        this.setState({ supporters: data });
+      })
+      .catch(err => {
+        console.error(err);
+      });
+
   }
 
   fetchNews = () => {
@@ -18,7 +61,6 @@ class Homepage extends Component {
         return response.json();
       })
       .then(data => {
-        console.error(data);
         this.setState({ news: data });
       })
       .catch(err => {
@@ -322,419 +364,8 @@ class Homepage extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="carousel">
-                  <div
-                    className="carousel-item"
-                    style={{ position: 'relative', height: '550.4px' }}>
-                    <div
-                      className="grid-item"
-                      style={{ position: 'absolute', left: '0%', top: '0px' }}>
-                      <div className="agent">
-                        <div className="agent-avatar">
-                          <a href="agent-page.html">
-                            <img src="images/agent-01.jpg" alt="" />
-                            <span className="view-profile-btn">
-                              View Profile
-                            </span>
-                          </a>
-                        </div>
+                {this.state.benefactors.map((benefactor)=> <Benefactor {...benefactor}/>)}
 
-                        <div className="agent-content">
-                          <div className="agent-name">
-                            <h4>
-                              <a href="agent-page.html">Tom Wilson</a>
-                            </h4>
-                            <span>Agent In New York</span>
-                          </div>
-
-                          <ul className="agent-contact-details">
-                            <li>
-                              <i className="sl sl-icon-call-in" />
-                              (123) 123-456
-                            </li>
-                            <li>
-                              <i className="fa fa-envelope-o " />
-                              <a href="#">
-                                <span
-                                  className="__cf_email__"
-                                  data-cfemail="f0849f9db09588919d809c95de939f9d">
-                                  [email&nbsp;protected]
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-
-                          <ul className="social-icons">
-                            <li>
-                              <a className="facebook" href="#">
-                                <i className="icon-facebook" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#">
-                                <i className="icon-twitter" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="gplus" href="#">
-                                <i className="icon-gplus" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#">
-                                <i className="icon-linkedin" />
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="clearfix" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="carousel-item"
-                    style={{ position: 'relative', height: '550.4px' }}>
-                    <div
-                      className="grid-item"
-                      style={{ position: 'absolute', left: '0%', top: '0px' }}>
-                      <div className="agent">
-                        <div className="agent-avatar">
-                          <a href="agent-page.html">
-                            <img src="images/agent-01.jpg" alt="" />
-                            <span className="view-profile-btn">
-                              View Profile
-                            </span>
-                          </a>
-                        </div>
-
-                        <div className="agent-content">
-                          <div className="agent-name">
-                            <h4>
-                              <a href="agent-page.html">Tom Wilson</a>
-                            </h4>
-                            <span>Agent In New York</span>
-                          </div>
-
-                          <ul className="agent-contact-details">
-                            <li>
-                              <i className="sl sl-icon-call-in" />
-                              (123) 123-456
-                            </li>
-                            <li>
-                              <i className="fa fa-envelope-o " />
-                              <a href="#">
-                                <span
-                                  className="__cf_email__"
-                                  data-cfemail="f0849f9db09588919d809c95de939f9d">
-                                  [email&nbsp;protected]
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-
-                          <ul className="social-icons">
-                            <li>
-                              <a className="facebook" href="#">
-                                <i className="icon-facebook" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#">
-                                <i className="icon-twitter" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="gplus" href="#">
-                                <i className="icon-gplus" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#">
-                                <i className="icon-linkedin" />
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="clearfix" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="carousel-item"
-                    style={{ position: 'relative', height: '550.4px' }}>
-                    <div
-                      className="grid-item"
-                      style={{ position: 'absolute', left: '0%', top: '0px' }}>
-                      <div className="agent">
-                        <div className="agent-avatar">
-                          <a href="agent-page.html">
-                            <img src="images/agent-01.jpg" alt="" />
-                            <span className="view-profile-btn">
-                              View Profile
-                            </span>
-                          </a>
-                        </div>
-
-                        <div className="agent-content">
-                          <div className="agent-name">
-                            <h4>
-                              <a href="agent-page.html">Tom Wilson</a>
-                            </h4>
-                            <span>Agent In New York</span>
-                          </div>
-
-                          <ul className="agent-contact-details">
-                            <li>
-                              <i className="sl sl-icon-call-in" />
-                              (123) 123-456
-                            </li>
-                            <li>
-                              <i className="fa fa-envelope-o " />
-                              <a href="#">
-                                <span
-                                  className="__cf_email__"
-                                  data-cfemail="f0849f9db09588919d809c95de939f9d">
-                                  [email&nbsp;protected]
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-
-                          <ul className="social-icons">
-                            <li>
-                              <a className="facebook" href="#">
-                                <i className="icon-facebook" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#">
-                                <i className="icon-twitter" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="gplus" href="#">
-                                <i className="icon-gplus" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#">
-                                <i className="icon-linkedin" />
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="clearfix" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="carousel-item"
-                    style={{ position: 'relative', height: '550.4px' }}>
-                    <div
-                      className="grid-item"
-                      style={{ position: 'absolute', left: '0%', top: '0px' }}>
-                      <div className="agent">
-                        <div className="agent-avatar">
-                          <a href="agent-page.html">
-                            <img src="images/agent-01.jpg" alt="" />
-                            <span className="view-profile-btn">
-                              View Profile
-                            </span>
-                          </a>
-                        </div>
-
-                        <div className="agent-content">
-                          <div className="agent-name">
-                            <h4>
-                              <a href="agent-page.html">Tom Wilson</a>
-                            </h4>
-                            <span>Agent In New York</span>
-                          </div>
-
-                          <ul className="agent-contact-details">
-                            <li>
-                              <i className="sl sl-icon-call-in" />
-                              (123) 123-456
-                            </li>
-                            <li>
-                              <i className="fa fa-envelope-o " />
-                              <a href="#">
-                                <span
-                                  className="__cf_email__"
-                                  data-cfemail="f0849f9db09588919d809c95de939f9d">
-                                  [email&nbsp;protected]
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-
-                          <ul className="social-icons">
-                            <li>
-                              <a className="facebook" href="#">
-                                <i className="icon-facebook" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#">
-                                <i className="icon-twitter" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="gplus" href="#">
-                                <i className="icon-gplus" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#">
-                                <i className="icon-linkedin" />
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="clearfix" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="carousel-item"
-                    style={{ position: 'relative', height: '550.4px' }}>
-                    <div
-                      className="grid-item"
-                      style={{ position: 'absolute', left: '0%', top: '0px' }}>
-                      <div className="agent">
-                        <div className="agent-avatar">
-                          <a href="agent-page.html">
-                            <img src="images/agent-01.jpg" alt="" />
-                            <span className="view-profile-btn">
-                              View Profile
-                            </span>
-                          </a>
-                        </div>
-
-                        <div className="agent-content">
-                          <div className="agent-name">
-                            <h4>
-                              <a href="agent-page.html">Tom Wilson</a>
-                            </h4>
-                            <span>Agent In New York</span>
-                          </div>
-
-                          <ul className="agent-contact-details">
-                            <li>
-                              <i className="sl sl-icon-call-in" />
-                              (123) 123-456
-                            </li>
-                            <li>
-                              <i className="fa fa-envelope-o " />
-                              <a href="#">
-                                <span
-                                  className="__cf_email__"
-                                  data-cfemail="f0849f9db09588919d809c95de939f9d">
-                                  [email&nbsp;protected]
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-
-                          <ul className="social-icons">
-                            <li>
-                              <a className="facebook" href="#">
-                                <i className="icon-facebook" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#">
-                                <i className="icon-twitter" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="gplus" href="#">
-                                <i className="icon-gplus" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#">
-                                <i className="icon-linkedin" />
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="clearfix" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="carousel-item"
-                    style={{ position: 'relative', height: '550.4px' }}>
-                    <div
-                      className="grid-item"
-                      style={{ position: 'absolute', left: '0%', top: '0px' }}>
-                      <div className="agent">
-                        <div className="agent-avatar">
-                          <a href="agent-page.html">
-                            <img src="images/agent-01.jpg" alt="" />
-                            <span className="view-profile-btn">
-                              View Profile
-                            </span>
-                          </a>
-                        </div>
-
-                        <div className="agent-content">
-                          <div className="agent-name">
-                            <h4>
-                              <a href="agent-page.html">Tom Wilson</a>
-                            </h4>
-                            <span>Agent In New York</span>
-                          </div>
-
-                          <ul className="agent-contact-details">
-                            <li>
-                              <i className="sl sl-icon-call-in" />
-                              (123) 123-456
-                            </li>
-                            <li>
-                              <i className="fa fa-envelope-o " />
-                              <a href="#">
-                                <span
-                                  className="__cf_email__"
-                                  data-cfemail="f0849f9db09588919d809c95de939f9d">
-                                  [email&nbsp;protected]
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-
-                          <ul className="social-icons">
-                            <li>
-                              <a className="facebook" href="#">
-                                <i className="icon-facebook" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#">
-                                <i className="icon-twitter" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="gplus" href="#">
-                                <i className="icon-gplus" />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#">
-                                <i className="icon-linkedin" />
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="clearfix" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -750,33 +381,7 @@ class Homepage extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="logo-carousel dot-navigation">
-                  <div className="item">
-                    <img src="images/logo-01.png" alt="" />
-                  </div>
-
-                  <div className="item">
-                    <img src="images/logo-02.png" alt="" />
-                  </div>
-
-                  <div className="item">
-                    <img src="images/logo-03.png" alt="" />
-                  </div>
-
-                  <div className="item">
-                    <img src="images/logo-04.png" alt="" />
-                  </div>
-
-                  <div className="item">
-                    <img src="images/logo-05.png" alt="" />
-                  </div>
-
-                  <div className="item">
-                    <img src="images/logo-06.png" alt="" />
-                  </div>
-
-                  <div className="item">
-                    <img src="images/logo-07.png" alt="" />
-                  </div>
+                  {this.state.supporters.map((supporter)=><Supporter {...supporter}/>)}
                 </div>
               </div>
             </div>

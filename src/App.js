@@ -16,6 +16,7 @@ import GoalsandGuidelines from './screens/GoalsandGuidelines';
 import BoardofTrustees from './screens/BoardofTrustees';
 import Inspector from './screens/Inspector';
 import FAQ from './screens/FAQ';
+import CEO from './screens/CEO';
 import SupportSus from './screens/SupportSus';
 import HelpActionProjs from './screens/HelpActionProjs';
 import JoinDonators from './screens/JoinDonators';
@@ -62,6 +63,7 @@ class App extends Component {
                 <Route path="/Inspector" component={Inspector} />
                 <Route path="/ContactUs" component={ContactUs} />
                 <Route path="/FAQ" component={FAQ} />
+                <Route path="/CEO" component={CEO} />
                 <Route path="/JoinDonators" component={JoinDonators} />
                 <Route path="/DonateEdu" component={DonateEdu} />
                 <Route path="/SupportInt" component={SupportInt} />

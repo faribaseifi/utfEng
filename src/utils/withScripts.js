@@ -9,7 +9,7 @@ export const loadScripts = scripts => {
   });
 };
 
-const scripts = [
+export const scripts = [
   'scripts/jquery-2.2.0.min.js',
   'scripts/chosen.min.js',
   'scripts/magnific-popup.min.js',
