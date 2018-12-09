@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NavItem from '../components/NavItem'
 
 
-class Donator extends Component {
+class CEO extends Component {
 render(){
   return (
     <Fragment>
@@ -21,7 +21,8 @@ render(){
               <nav id="breadcrumbs">
                 <ul>
                   <NavItem to="/">Homepage</NavItem>
-                  <NavItem to="/Donator">Donators</NavItem>
+                  <NavItem to="/elements">Elements</NavItem>
+                  <NavItem to="/CEO">CEO</NavItem>
                 </ul>
               </nav>
 
@@ -46,7 +47,7 @@ render(){
 
 
       				<div class="post-content">
-      					<h3>about donators of university of tehran
+      					<h3>CEO
     </h3>
 
 
@@ -93,4 +94,4 @@ render(){
 }
 }
 
-export default Donator;
+export default CEO;

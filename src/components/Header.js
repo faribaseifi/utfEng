@@ -47,7 +47,7 @@ export class Header extends Component {
             <div className="left-side">
               <div id="logo">
                 <a href="index-2.html">
-                  <img src="images/Capture.PNG" alt="" />
+                  <img src="images/Capture.PNG" alt="" href="/" />
                 </a>
               </div>
 
@@ -77,7 +77,7 @@ export class Header extends Component {
                       </NavItem>
 
                       <li>
-                        <a href="elements.html">Reports</a>
+                        <a style = {{fontSize: "13px"}} href="#">Reports</a>
 
                         <ul>
                           <NavItem to="/OperationReport">
@@ -98,7 +98,7 @@ export class Header extends Component {
                         </ul>
                       </li>
                       <li>
-                        <a href="#">Elements</a>
+                        <a style = {{fontSize: "13px"}} href="#">Elements</a>
                         <ul>
                           <NavItem to="/OrganizationalChart">
                             Organizational Chart
@@ -109,16 +109,15 @@ export class Header extends Component {
                           </NavItem>
 
                           <li>
-                            <a href="single-property-page-3.html">
+                            <a style = {{fontSize: "13px"}} href="single-property-page-3.html">
                               Board of Directors
                             </a>
                             <ul>
                               <NavItem to="/Inspector">Inspector</NavItem>
                             </ul>
 
-                            <li>
-                              <a href="elements.html">CEO</a>
-                            </li>
+                            <NavItem to="/CEO">CEO</NavItem>
+
                           </li>
                         </ul>
                       </li>
@@ -142,7 +141,7 @@ export class Header extends Component {
                     <a style = {{fontSize: "13px"}} href="#">How To</a>
                     <ul>
                       <li>
-                        <a href="blog.html">Help with Student Loans</a>
+                        <a style = {{fontSize: "13px"}} href="#">Help with Student Loans</a>
                         <ul>
                           <NavItem to="/SupportSus">
                             Support Susceptible Students
