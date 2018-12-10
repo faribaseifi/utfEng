@@ -38,8 +38,8 @@ export class Profile extends Component {
 
       					<ul className="my-account-nav">
       						<li className="sub-nav-title">Manage Account</li>
-      						<li><a href="my-profile.html" className="current"><i className="sl sl-icon-user"></i> My Profile</a></li>
-      						<li><a href="my-bookmarks.html"><i className="sl sl-icon-star"></i> Bookmarked Listings</a></li>
+      						<li><a href="/profile" className="current"><i className="sl sl-icon-user"></i> My Profile</a></li>
+      						<li><a href="/Payments"><i className="sl sl-icon-star"></i> Payments (Donations)</a></li>
       					</ul>
 
       					<ul className="my-account-nav">
@@ -49,8 +49,7 @@ export class Profile extends Component {
       					</ul>
 
       					<ul className="my-account-nav">
-      						<li><a href="change-password.html"><i className="sl sl-icon-lock"></i> Change Password</a></li>
-      						<li><a href="#"><i className="sl sl-icon-power"></i> Log Out</a></li>
+      						<li><a href="/ChangePass"><i className="sl sl-icon-lock"></i> Change Password</a></li>
       					</ul>
 
       				</div>
@@ -62,58 +61,74 @@ export class Profile extends Component {
       			<div className="row">
 
 
-      				<div className="col-md-8 my-profile">
+      				<div className="col-md-12 my-profile">
       					<h4 className="margin-top-0 margin-bottom-30">My Account</h4>
 
       					<label>First name & Last name</label>
-      					<input value="Jennie Wilson" type="text"></input>
+      					<input disabled value="Jennie Wilson" type="text"></input>
 
       					<label>National country code (Iranian)</label>
-      					<input value="036156419845" type="text"></input>
+      					<input disabled value="036156419845" type="text"></input>
 
       					<label>Phone</label>
-      					<input value="(123) 123-456" type="text"></input>
+      					<input disabled value="(123) 123-456" type="text"></input>
 
                 <label>Mobile Phone</label>
-                <input value="(123) 123-456" type="text"></input>
+                <input disabled value="(123) 123-456" type="text"></input>
 
       					<label>Email</label>
-      					<input value="jennie@example.com" type="text"></input>
+      					<input placeholder="something@gmail.com" type="email"></input>
+
+                <label>Date of Birth</label>
+                <input type="date" name="bday"></input>
+
+                <label>year of graduation</label>
+                <input type="date" name="gday"></input>
+
+                <label>Level of Education</label>
+                <input type="text" name="levelGrad"></input>
+
+                <label>Studied Subjects</label>
+                <input type="text" name="subsLevel"></input>
+
+                <select name="cars">
+                  <option value="howCameToKnowUs">How did you came to know our organization?</option>
+                  <option value="masterOfUni">a Master in this university</option>
+                  <option value="ourWebsite">I found out about your website</option>
+                  <option value="socialNet">Through social nerworks</option>
+                  <option value="otherDons">other Donators</option>
+                  <option value="others">other</option>
+                </select>
+
+                <label>Address</label>
+                <input type="text" name="adress"></input>
+
+                <h4 className="margin-top-0 margin-bottom-30">Positions</h4>
 
 
-      					<h4 className="margin-top-50 margin-bottom-25">About Me</h4>
-      					<textarea name="about" id="about" cols="30" rows="10">Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper</textarea>
+                <div class="checkboxes in-row margin-bottom-20">
+
+                				<input id="check-2" type="checkbox" name="check"></input>
+                				<label for="check-2">Science Committee</label>
+                        <input type="personalID" name="check" placeholder="personal ID"></input>
+
+                				<input id="check-3" type="checkbox" name="check"></input>
+                				<label for="check-3">Employee</label>
+                        <input type="personalID1" name="check" placeholder="personal ID"></input>
+                        <input type="organizationalPositions" name="check" placeholder="organizational Positions"></input>
 
 
-      					<h4 className="margin-top-50 margin-bottom-0">Social</h4>
+                				<input id="check-4" type="checkbox" name="check"></input>
+                				<label for="check-4">Student</label>
+                        <input type="studentID" name="check" placeholder="Student ID"></input>
 
-      					<label><i className="fa fa-twitter"></i> Twitter</label>
-      					<input value="https://www.twitter.com/" type="text"></input>
+                				<input id="check-5" type="checkbox" name="check"></input>
+                				<label for="check-5">other jobs</label>
+                        <input type="othersDescription" name="check" placeholder="other jobs Description"></input>
 
-      					<label><i className="fa fa-facebook-square"></i> Facebook</label>
-      					<input value="https://www.facebook.com/" type="text"></input>
-
-      					<label><i className="fa fa-google-plus"></i> Google+</label>
-      					<input value="https://www.google.com/" type="text"></input>
-
-      					<label><i className="fa fa-linkedin"></i> Linkedin</label>
-      					<input value="https://www.linkedin.com/" type="text"></input>
-
+                			</div>
 
       					<button className="button margin-top-20 margin-bottom-20">Save Changes</button>
-      				</div>
-
-      				<div className="col-md-4">
-      					<div className="edit-profile-photo">
-      						<img src="images/agent-02.jpg" alt=""></img>
-      						<div className="change-photo-btn">
-      							<div className="photoUpload">
-      							    <span><i className="fa fa-upload"></i> Upload Photo</span>
-      							    <input type="file" className="upload"></input>
-      							</div>
-      						</div>
-      					</div>
-
       				</div>
 
 

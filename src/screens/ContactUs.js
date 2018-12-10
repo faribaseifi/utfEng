@@ -1,10 +1,11 @@
 import React, { Component , Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import NavItem from '../components/NavItem'
+import NavItem from '../components/NavItem';
 
 
 
 class ContactUs extends Component {
+
 render(){
   return (
 

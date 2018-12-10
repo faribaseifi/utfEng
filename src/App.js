@@ -7,6 +7,7 @@ import Login from './screens/Login';
 import Profile from './screens/Profile';
 import AboutUni from './screens/AboutUni';
 import Branches from './screens/Branches';
+import Payments from './screens/Payments';
 import OrganizationalChart from './screens/OrganizationalChart';
 import FinancialReport from './screens/FinancialReport';
 import DonationsReport from './screens/DonationsReport';
@@ -52,6 +53,7 @@ class App extends Component {
                 <Route path="/AboutUni" component={AboutUni} />
                 <Route path="/Donator" component={Donator} />
                 <Route path="/Branches" component={Branches} />
+                <Route path="/Payments" component={Payments} />
                 <Route path="/OperationReport" component={OperationReport} />
                 <Route path="/DonationsReport" component={DonationsReport} />
                 <Route path="/FinancialReport" component={FinancialReport} />
